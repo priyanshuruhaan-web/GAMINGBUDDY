@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gaming Buddy Hub Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <h1>🎮 Gaming Buddy Hub</h1>
+  <input id="name" placeholder="Enter your name">
+  <button onclick="enterApp()">Join</button>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+  <h2>Find Gaming Friends 👥</h2>
+
+  <div class="filters">
+
+    <select id="game">
+      <option value="">Select Game</option>
+      <option>Free Fire</option>
+      <option>PUBG</option>
+      <option>BGMI</option>
+      <option>Minecraft</option>
+      <option>Valorant</option>
+      <option>Roblox</option>
+    </select>
+
+    <select id="skill">
+      <option value="">Skill</option>
+      <option>Beginner</option>
+      <option>Pro</option>
+      <option>Expert</option>
+    </select>
+
+    <select id="style">
+      <option value="">Style</option>
+      <option>Neon</option>
+      <option>Fire</option>
+      <option>Ice</option>
+      <option>Dark</option>
+      <option>Rainbow</option>
+    </select>
+
+  <button style="background:#00ffcc;color:black;font-weight:bold"
+onclick="openChat('${u.name}')">
+💬 CHAT NOW
+</button>
+
+  </div>
+
+  <div id="results"></div>
+
+</div>
+
+<!-- 💬 CHAT PANEL -->
+<div id="chatPanel">
+
+  <div id="chatHeader">💬 Chat</div>
+  <div id="chatWith">No chat selected</div>
+
+  <div id="messages"></div>
+
+  <input id="msg" placeholder="Type message...">
+  <button onclick="sendMsg()">Send</button>
+  <button onclick="closeChat()">Close</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
